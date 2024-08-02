@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do App</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <button onclick="login()">Login with Keycloak</button>
+
+    <script>
+        function login() {
+            window.location.href = "http://localhost:8080/auth/realms/your-realm/protocol/openid-connect/auth?client_id=your-client-id&redirect_uri=http://localhost:5000/graphql&response_type=code";
+        }
+    </script>
+</body>
+</html>
